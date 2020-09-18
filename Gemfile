@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Semantic-ui for frontend
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
+gem 'byebug'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -29,7 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'hirb'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

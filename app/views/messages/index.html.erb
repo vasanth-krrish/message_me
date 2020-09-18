@@ -1,0 +1,42 @@
+<h2 class="ui center aligned icon header">
+  <i class="circular pen square inverted grey icon"></i>
+  Say Something...
+</h2>
+
+<div class="ui two column grid">
+
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content" id="messages">
+        <div class="ui feed" id="message-container">
+          <%= render @messages %>
+        </div>
+      </div>
+      <div class="extra content">
+        <%= form_for(@message, html: {class: "ui reply form"}, url: 'message', remote: true, id: "cform") do |f| %>
+          <div class="field">
+            <div class="ui fluid icon input">
+              <%= f.text_field :body, placeholder: "Type a message.." %>
+              <%= f.button "Send", class: "blue ui button"%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="ui inverted vertical menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+  </div>
+
+</div>

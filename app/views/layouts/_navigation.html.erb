@@ -3,15 +3,13 @@
   Messages
 </a>
 <div class="right menu">
-  <div class="ui dropdown item">
-    Account <i class="dropdown icon"></i>
-    <div class="menu">
-      <a class="item" href="/login">Login</a>
-      <a class="item" href="/signup">Signup</a>
-      <a class="item">Logout</a>
-    </div>
-  </div>
   <div class="item">
-      <div class="ui primary button">Sign Up</div>
+    <% if logged_in? %>
+      <%= link_to logout_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: "ui primary button" do %>
+        Logout
+      <% end %>
+    <% else %>
+      <a class="ui primary button" href="/login">Login</a>
+    <% end %>
   </div>
 </div>
